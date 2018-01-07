@@ -1,0 +1,12 @@
+target/
+**/static/
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+build/
+
+### NPM ###
+node/
+**/node_modules/
+etc/

@@ -1,0 +1,6 @@
+https://spring.io/guides/tutorials/spring-security-and-angular-js/
+https://developer.okta.com/quickstart/#/angular/java/spring
+https://developer.okta.com/blog/2017/09/19/build-a-secure-notes-application-with-kotlin-typescript-and-okta
+https://developer.okta.com/blog/page/3/
+https://developer.okta.com/authentication-guide/auth-overview/
+https://developer.okta.com/authentication-guide/implementing-authentication/implicit
