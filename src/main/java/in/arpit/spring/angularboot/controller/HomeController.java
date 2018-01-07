@@ -16,7 +16,7 @@ public class HomeController {
     @Autowired
     private NotesRepository repository;
 
-    @GetMapping("/notes")
+    @GetMapping("/note")
     public List<Note> home(Principal principal){
         List<Note> notes = repository.findAllByUser(principal.getName());
         if (notes.isEmpty()) {
