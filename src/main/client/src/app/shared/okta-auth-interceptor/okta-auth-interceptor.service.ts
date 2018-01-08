@@ -16,19 +16,13 @@ export class OktaAuthInterceptor implements HttpInterceptor {
       const accessToken = this.oktaService.getOktaAuth().tokenManager.get('accessToken');
       request = request.clone({
         setHeaders: {
+          'X-Requested-With': 'XMLHttpRequest',
+          // tslint:disable-next-line:object-literal-key-quotes
           Authorization: `${accessToken.tokenType} ${accessToken.accessToken}`,
         },
       });
     }
 
-    return next.handle(request).do((event: HttpEvent<any>) => {
-      if (event instanceof HttpResponse) {
-        return event;
-      } else if (event instanceof HttpErrorResponse) {
-        if (event.status === 401) {
-          this.oktaService.loginRedirect();
-        }
-      }
-    });
+    return next.handle(request);
   }
 }

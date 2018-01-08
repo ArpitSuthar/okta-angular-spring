@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { OktaConfig } from '@okta/okta-angular/dist/okta/okta.config';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
 import { NoteListComponent } from './note-list/note-list.component';
 import { NoteService } from './shared/note/note.service';
 import { OktaAuthInterceptor } from './shared/okta-auth-interceptor/okta-auth-interceptor.service';
@@ -29,7 +28,6 @@ const config: OktaConfig = {
   declarations: [
     AppComponent,
     NoteListComponent,
-    LoginComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [NoteService, OktaAuthService, OktaAuthGuard, {

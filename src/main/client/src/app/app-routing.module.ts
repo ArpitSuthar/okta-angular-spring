@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { OktaAuthGuard } from '@okta/okta-angular';
-import { LoginComponent } from './login/login.component';
+import { OktaAuthGuard, OktaCallbackComponent } from '@okta/okta-angular';
 import { NoteListComponent } from './note-list/note-list.component';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'notes', component: NoteListComponent, canActivate: [OktaAuthGuard]},
-  {path: '', redirectTo: '/notes', pathMatch: 'full'},
+  {path: 'note', component: NoteListComponent, canActivate: [OktaAuthGuard]},
+  {path: '', redirectTo: '/', pathMatch: 'full'},
 ];
 
 @NgModule({

@@ -4,5 +4,6 @@
   Welcome {{user?.name}}!
   <button (click)="oktaService.logout()">Logout</button>
 </div>
+<button *ngIf="!oktaService.isAuthenticated()" (click)="oktaService.loginRedirect()"> Login </button>
 
 <router-outlet [hidden]="!user"></router-outlet>
