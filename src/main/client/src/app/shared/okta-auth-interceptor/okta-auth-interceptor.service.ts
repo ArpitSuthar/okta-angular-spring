@@ -11,7 +11,8 @@ export class OktaAuthInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    request.headers.append('X-Requested-With', 'XMLHttpRequest');
+    console.log(request.url);
+    console.log(request.urlWithParams);
     if (this.oktaService.isAuthenticated()) {
       const accessToken = this.oktaService.getOktaAuth().tokenManager.get('accessToken');
       request = request.clone({

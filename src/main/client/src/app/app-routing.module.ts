@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { OktaAuthGuard, OktaCallbackComponent } from '@okta/okta-angular';
+import { OktaAuthGuard } from '@okta/okta-angular';
 import { NoteListComponent } from './note-list/note-list.component';
 
 const appRoutes: Routes = [
