@@ -31,7 +31,7 @@ public class AngularBootApplication {
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http.cors().and().httpBasic().and().authorizeRequests()
-                    .antMatchers( "/", "/*.css","/*.js","/implicit/callback").permitAll()
+                    .antMatchers( "/", "/*.css","/*.js").permitAll()
                     .anyRequest().authenticated();
         }
     }

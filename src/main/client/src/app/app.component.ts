@@ -14,10 +14,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.oktaService.handleAuthentication();
     if (this.oktaService.isAuthenticated()) {
-      this.user = this.oktaService.getIdToken;
-      // this.router.navigate(['/notes']);
+      this.user = this.oktaService.getIdToken().claims.email;
+    } else {
+      this.oktaService.handleAuthentication();
     }
   }
 }

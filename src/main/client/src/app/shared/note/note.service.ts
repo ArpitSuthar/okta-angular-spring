@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class NoteService {
   public API = 'http://localhost:8080';
-  public NOTE_API = this.API + '/notes';
+  public NOTE_API = this.API + '/note';
 
   constructor(private http: HttpClient) { }
 

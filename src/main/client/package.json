@@ -2,9 +2,9 @@
   "name": "client",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --aot",
-    "build-dev": "ng build  --aot --prod --watch=true --output-hashing=none",
-    "build": "ng build --aot --prod --output-hashing=none",
+    "start": "ng serve",
+    "build-dev": "ng build  --watch=true --output-hashing=none",
+    "build": "ng build --output-hashing=none",
     "test": "ng test",
     "lint": "ng lint --type-check",
     "e2e": "ng e2e"

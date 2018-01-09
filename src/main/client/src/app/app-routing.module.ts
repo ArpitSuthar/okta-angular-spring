@@ -5,7 +5,7 @@ import { OktaAuthGuard } from '@okta/okta-angular';
 import { NoteListComponent } from './note-list/note-list.component';
 
 const appRoutes: Routes = [
-  {path: 'note', component: NoteListComponent, canActivate: [OktaAuthGuard]},
+  {path: 'notes', component: NoteListComponent, canActivate: [OktaAuthGuard]},
   {path: '', redirectTo: '/', pathMatch: 'full'},
 ];
 

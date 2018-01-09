@@ -30,7 +30,7 @@ const config: OktaConfig = {
     NoteListComponent,
   ],
   bootstrap: [ AppComponent ],
-  providers: [NoteService, OktaAuthService, OktaAuthGuard, {
+  providers: [NoteService, {
     provide: HTTP_INTERCEPTORS,
     useClass: OktaAuthInterceptor,
     multi: true,
