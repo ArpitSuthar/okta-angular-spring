@@ -10,7 +10,7 @@ export class NoteService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(this.API);
+    return this.http.get(this.NOTE_API);
   }
 
 }

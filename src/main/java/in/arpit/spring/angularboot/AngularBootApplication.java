@@ -30,23 +30,11 @@ public class AngularBootApplication {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http.cors().and().httpBasic().and().authorizeRequests()
-                    .antMatchers( "/", "/*.css","/*.js").permitAll()
+
+            http.antMatcher("/**").authorizeRequests()
+                    .antMatchers("/", "/*.css", "/*.js").permitAll()
                     .anyRequest().authenticated();
         }
-    }
-
-
-    @Bean
-    @Order(Ordered.HIGHEST_PRECEDENCE)
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:8080");
-            }
-        };
     }
 
     @Bean
@@ -59,5 +47,4 @@ public class AngularBootApplication {
             }
         };
     }
-
 }
